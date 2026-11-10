@@ -6,7 +6,18 @@ document.getElementById("login-btn").addEventListener("click", function () {
   const mobileNumber = inputNumber.value;
   console.log(mobileNumber);
   // 2. get the pin number
+  const inputPin = document.getElementById("input-pin");
+  const pin = inputPin.value;
+  console.log(pin);
   // 3. match the number & pin
-  // 3.1 true -> alert -> home page
-  // 3.2 false -> alert -> return.
+  if (mobileNumber === "01234567899" && pin === "1234") {
+    // 3.1 true -> alert -> home page
+    alert("Login Successfully");
+    // window.location.replace("/home.html");
+    window.location.assign("/home.html");
+  } else {
+    // 3.2 false -> alert -> return.
+    alert("Type the correct Number or Pin");
+    return;
+  }
 });
