@@ -1,4 +1,4 @@
-document.getElementById("cashout").addEventListener("click", function () {
+document.getElementById("cashout-btn").addEventListener("click", function () {
   // 1. get the agent number and validate
   const agentNumber = getValueFromInput("agent-number");
   if (agentNumber.length != 11) {
