@@ -96,8 +96,72 @@
         </div>
       </section>
     </div>
-    <!-- CashOut form -->
-    <section class="w-11/12 mx-auto py-3">
+
+    <!-- Add Money section -->
+    <section id="add-money" class="w-11/12 mx-auto py-3">
+      <h1 class="text-3xl font-bold py-5">Add Money</h1>
+      <div class="card bg-base-100 w-full shadow rounded-2xl mx-auto">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label font-semibold text-lg text-neutral/70"
+              >Select A Bank</label
+            >
+            <select
+              id="add-money-bank"
+              class="select rounded-full w-full bg-base-200 border-none"
+            >
+              <option disabled selected class="">Select Bank</option>
+              <option>DBBL</option>
+              <option>UCB</option>
+              <option>CITY</option>
+            </select>
+            <br />
+            <label class="label font-semibold text-lg text-neutral/70"
+              >Bank Account Number</label
+            >
+            <input
+              type="text"
+              id="bank-account-number"
+              class="input rounded-full w-full bg-base-200 border-none"
+              maxlength="11"
+              minlength="11"
+              placeholder="Enter Bank Account Number"
+            />
+            <br />
+            <label class="label font-semibold text-lg text-neutral/70"
+              >Amount to Add</label
+            >
+            <input
+              type="number"
+              id="add-money-amount"
+              class="input rounded-full w-full bg-base-200 border-none"
+              placeholder="Add Amount to Withdraw"
+            />
+            <br />
+            <label class="label font-semibold text-lg text-neutral/70"
+              >Pin Number</label
+            >
+            <input
+              type="password"
+              id="add-money-pin"
+              class="input rounded-full w-full bg-base-200 border-none"
+              maxlength="4"
+              placeholder="Enter 4 Digit Pin"
+            />
+
+            <button
+              id="add-money-btn"
+              class="btn btn-primary text-[18px] rounded-full mt-4"
+            >
+              Add Money
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <!-- CashOut section -->
+    <section id="cashout" class="w-11/12 mx-auto py-3 hidden">
       <h1 class="text-3xl font-bold py-5">CashOut</h1>
       <div class="card bg-base-100 w-full shadow rounded-2xl mx-auto">
         <div class="card-body">
@@ -135,7 +199,10 @@
               placeholder="Enter 4 Digit Pin"
             />
 
-            <button id="cashout" class="btn btn-primary rounded-full mt-4">
+            <button
+              id="cashout"
+              class="btn btn-primary text-lg rounded-full mt-4"
+            >
               Withdraw
             </button>
           </fieldset>
@@ -143,6 +210,7 @@
       </div>
     </section>
     <script src="scripts/common.js"></script>
+    <script src="scripts/add-money.js"></script>
     <script src="scripts/cashout.js"></script>
   </body>
 </html>
