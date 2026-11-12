@@ -21,11 +21,15 @@ function showOnly(id) {
   const addMoney = document.getElementById("add-money");
   const cashOut = document.getElementById("cashout");
   const sendMoney = document.getElementById("send-money");
+  const bonus = document.getElementById("get-bonus");
+  const payBill = document.getElementById("pay-bill");
   const transactions = document.getElementById("transactions");
 
   addMoney.classList.add("hidden");
   cashOut.classList.add("hidden");
   sendMoney.classList.add("hidden");
+  bonus.classList.add("hidden");
+  payBill.classList.add("hidden");
   transactions.classList.add("hidden");
 
   const show = document.getElementById(id);

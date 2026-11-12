@@ -12,12 +12,12 @@ document.getElementById("login-btn").addEventListener("click", function () {
   // 3. match the number & pin
   if (mobileNumber === "01234567899" && pin === "1234") {
     // 3.1 true -> alert -> home page
-    alert("Login Successfully");
+    alert("Login Successful");
     // window.location.replace("/home.html");
     window.location.assign("/home.html");
   } else {
     // 3.2 false -> alert -> return.
-    alert("Type the correct Number or Pin");
+    alert("Incorrect Pin");
     return;
   }
 });

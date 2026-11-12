@@ -90,11 +90,17 @@
             <img src="assets/opt-3.png" alt="" />
             <p>Send Money</p>
           </button>
-          <button class="btn btn-primary btn-soft flex-col h-full py-4">
+          <button
+            onclick="showOnly('get-bonus')"
+            class="btn btn-primary btn-soft flex-col h-full py-4"
+          >
             <img src="assets/opt-4.png" alt="" />
             <p>Get Bonus</p>
           </button>
-          <button class="btn btn-primary btn-soft flex-col h-full py-4">
+          <button
+            onclick="showOnly('pay-bill')"
+            class="btn btn-primary btn-soft flex-col h-full py-4"
+          >
             <img src="assets/opt-5.png" alt="" />
             <p>Pay Bill</p>
           </button>
@@ -215,7 +221,7 @@
               id="cashout-btn"
               class="btn btn-primary text-lg rounded-full mt-4"
             >
-              Withdraw
+              Cash Out
             </button>
           </fieldset>
         </div>
@@ -272,6 +278,98 @@
       </div>
     </section>
 
+    <!-- Get Bonus -->
+    <section id="get-bonus" class="w-11/12 mx-auto py-3 hidden">
+      <h1 class="text-3xl font-bold py-5">Get Bonus</h1>
+      <div class="card bg-base-100 w-full shadow rounded-2xl mx-auto">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label font-semibold text-lg text-neutral/70"
+              >Bonus Coupon</label
+            >
+            <input
+              type="text"
+              id="coupon"
+              value="NH629"
+              class="input rounded-full w-full bg-base-200 border-none"
+              placeholder="Enter Your Coupon"
+            />
+
+            <button
+              id="bonus-btn"
+              class="btn btn-primary text-lg rounded-full mt-4"
+            >
+              Get Bonus
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pay Bill -->
+
+    <section id="pay-bill" class="w-11/12 mx-auto py-3 hidden">
+      <h1 class="text-3xl font-bold py-5">Pay Bill</h1>
+      <div class="card bg-base-100 w-full shadow rounded-2xl mx-auto">
+        <div class="card-body">
+          <fieldset class="fieldset">
+            <label class="label font-semibold text-lg text-neutral/70"
+              >Select to Pay</label
+            >
+            <select
+              id="pay-bill-type"
+              class="select rounded-full w-full bg-base-200 border-none"
+            >
+              <option disabled selected class="">Select</option>
+              <option>Electricity Bill</option>
+              <option>Gas Bill</option>
+              <option>Water Bill</option>
+            </select>
+            <br />
+            <label class="label font-semibold text-lg text-neutral/70"
+              >Biller Account Number</label
+            >
+            <input
+              type="text"
+              id="biller-number"
+              class="input rounded-full w-full bg-base-200 border-none"
+              maxlength="11"
+              minlength="11"
+              placeholder="Enter Bank Account Number"
+            />
+            <br />
+            <label class="label font-semibold text-lg text-neutral/70"
+              >Amount to Pay</label
+            >
+            <input
+              type="number"
+              id="pay-amount"
+              class="input rounded-full w-full bg-base-200 border-none"
+              placeholder="Add Amount to Withdraw"
+            />
+            <br />
+            <label class="label font-semibold text-lg text-neutral/70"
+              >Pin Number</label
+            >
+            <input
+              type="password"
+              id="pay-bill-pin"
+              class="input rounded-full w-full bg-base-200 border-none"
+              maxlength="4"
+              placeholder="Enter 4 Digit Pin"
+            />
+
+            <button
+              id="pay-btn"
+              class="btn btn-primary text-[18px] rounded-full mt-4"
+            >
+              Pay Now
+            </button>
+          </fieldset>
+        </div>
+      </div>
+    </section>
+
     <!-- Transactions -->
     <section id="transactions" class="w-11/12 mx-auto py-3 hidden">
       <h1 class="text-3xl font-bold py-5">Transactions</h1>
@@ -281,5 +379,7 @@
     <script src="scripts/add-money.js"></script>
     <script src="scripts/cashout.js"></script>
     <script src="scripts/send-money.js"></script>
+    <script src="scripts/bonus.js"></script>
+    <script src="scripts/pay-bill.js"></script>
   </body>
 </html>
